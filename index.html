@@ -3,32 +3,88 @@
 	<title>Vitadental</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta charset="UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Russo+One&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Russo+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/noscript.css" />
+		</noscript>
+		  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.eislideshow.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#ei-slider').eislideshow({
+					animation			: 'center',
+					autoplay			: true,
+					slideshow_interval	: 3000,
+					titlesFactor		: 0,
+                    thumbMaxWidth       : 500
+                });
+            });
+        </script>
 </head>
 <body>
 	<div id="screen1">
 		<div class="header-wrapper">
 			<div class="top-menu">
+				<ul>
+					<li><a href="#">Начало</a></a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">За нас</a></li>
+					<li class="active"><a href="#">Контакти</a></li>
+				</ul>
 			</div><!--top-menu-->
+			<div class="header-content">
+			 <div class="container">
+                <div id="ei-slider" class="ei-slider">
+                    <ul class="ei-slider-large">
+						<li>
+                            <img src="images/large/3.jpg" alt="image06"/>
+                            <div class="ei-title">
+                                <h2>Proffesional</h2>
+                                <h3>Care</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/large/1.jpg" alt="image01" />
+                            <div class="ei-title">
+                                <h2>Without</h2>
+                                <h3>Pain</h3>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/large/2.jpg" alt="image02" />
+                            <div class="ei-title">
+                                <h2>Awesome</h2>
+                                <h3>Smile</h3>
+                            </div>
+                        </li>
+                    </ul><!-- ei-slider-large -->
+                    <ul class="ei-slider-thumbs">
+                        <li class="ei-slider-element">Current</li>
+						<li><a href="#">Slide 6</a></li>
+                        <li><a href="#">Slide 1</a></li>
+                        <li><a href="#">Slide 2</a></li>
+                    </ul><!-- ei-slider-thumbs -->
+                </div><!-- ei-slider -->
+        		</div>
+        		<div class="header-footer">
+        			<div class="logo">
+        				<img src="img/logo.png">
+        			</div><!--logo-->
+        			<div class="logo-text">
+        				<p>Съществуват много вариации на пасажа Георги Димитров, но повечето от тях са променени по един или друг начин чрез добавяне на смешни думи или разбъркване на думите, което не изглежда много достоверно. Ако искате да използвате пасаж от Lorem Ipsum, трябва да сте сигурни, че в него няма смущаващи или нецензурни думи.</p>
+        			</div><!--logo-text-->
+        		</div><!--head-footer-->
+			</div><!--header-content-->
 		</div><!--header-wrapper-->
 	</div><!--screen1-->
 		
-	<div id="screen2">
-		<h1>Услуги</h1>
-
-	</div><!--screen2-->
-		
-	<div id="screen3">
-
-	</div><!--screen3-->
-	
-	<div id="screen4">
-		<h1>Контакти</h1>
-		<div class="location">
-			<p>Адрес: София, Хотел „Родина“, ет. 2</p>
-			<p>Телефон: 02 / 917 99 99</p>
-			<p>М-тел: 0888 311 746</p>
-		</div><!--location-->
-	</div><!--screen4-->
-
 </body>
 </html>

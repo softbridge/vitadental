@@ -5,17 +5,246 @@
 	margin: 0;
 }
 
+@font-face {
+font-family: Intro;
+src: url("../fonts/Intro.otf") format("opentype");
+}
+
+p {
+	font-family: 'Russo One', sans-serif;
+	font-size: 13px;
+}
+
 
 .header-wrapper {
 	width: 100%;
-	height: 678px;
-	background: url(../img/header-bg.gif);
-	background-size: cover;
+	height: 677px;
+	background: url(../img/header-bg.gif) no-repeat;
+	background-size: 100% 100%;
 }
 
 .top-menu {
 	height: 37px;
 	width: 100%;
 	background: rgba(59, 89, 152, 0.5);
+	background: rgba(255,255,255, 0.2);
+	position: fixed;
+	z-index: 10;
+}
 
+
+
+.top-menu ul {
+	height: 37px;
+	width: 360px;
+	margin: 0 auto;
+}
+
+.top-menu ul li {
+	list-style: none;
+}
+
+.top-menu ul li.active {
+	margin-right: 0;
+}
+
+.top-menu ul li a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	font-family: 'PT Sans Caption', sans-serif;
+	font-size: 14px;
+	height: 100%;
+	line-height: 37px;
+	float: left;
+	padding: 0 19px;
+}
+
+.top-menu ul li a:hover {
+	background: rgba(255, 255, 255, 0.3);
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+
+.header-content {
+	overflow: hidden;
+	width: 100%;
+	height: 677px;
+}
+
+.ei-slider{
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	height: 449px;
+	top: 37px;
+}
+.ei-slider-loading{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:999;
+	background: rgba(0,0,0,0.9);
+	color: #fff;
+	text-align: center;
+	line-height: 400px;
+}
+.ei-slider-large{
+	height: 100%;
+	width: 100%;
+	position:relative;
+	overflow: hidden;
+}
+.ei-slider-large li{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+.ei-slider-large li img{
+	width: 100%;
+}
+.ei-title{
+	position: absolute;
+	right: 50%;
+	margin-right: 13%;
+	top: 30%;
+}
+.ei-title h2, .ei-title h3{
+	text-align: right;
+}
+.ei-title h2{
+	font-size: 40px;
+	line-height: 50px;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	color: #fff;
+	text-shadow: 1px 4px 3px rgba(0,0,0,0.5);
+}
+.ei-title h3{
+	font-size: 70px;
+	line-height: 70px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: uppercase;
+	color: #000;
+}
+.ei-slider-thumbs{
+	height: 13px;
+	margin: 0 auto;
+	position: relative;
+}
+.ei-slider-thumbs li{
+	position: relative;
+	float: left;
+	height: 100%;
+}
+.ei-slider-thumbs li.ei-slider-element{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	height: 100%;
+	z-index: 10;
+	text-indent: -9000px;
+	background: #000;
+	background: rgba(0,0,0,0.9);
+}
+.ei-slider-thumbs li a{
+	display: block;
+	text-indent: -9000px;
+	background: #666 ;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	-webkit-box-shadow: 
+        0px 1px 1px 0px rgba(0,0,0,0.3), 
+        0px 1px 0px 1px rgba(255,255,255,0.5);
+	-moz-box-shadow: 
+        0px 1px 1px 0px rgba(0,0,0,0.3), 
+        0px 1px 0px 1px rgba(255,255,255,0.5);
+	box-shadow: 
+        0px 1px 1px 0px rgba(0,0,0,0.3), 
+        0px 1px 0px 1px rgba(255,255,255,0.5);
+	-webkit-transition: background 0.2s ease;
+    -moz-transition: background 0.2s ease;
+    -o-transition: background 0.2s ease;
+    -ms-transition: background 0.2s ease;
+    transition: background 0.2s ease;
+}
+.ei-slider-thumbs li a:hover{
+	background-color: #f0f0f0;
+}
+.ei-slider-thumbs li img{
+	position: absolute;
+	bottom: 50px;
+	opacity: 0;
+	z-index: 999;
+	max-width: 100%;
+	-webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+
+}
+.ei-slider-thumbs li:hover img{
+	opacity: 1;
+	bottom: 13px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+@media screen and (max-width: 830px) {
+	.ei-title{
+		position: absolute;
+		right: 0px;
+		margin-right: 0px;
+		width: 100%;
+		text-align: center;
+		top: auto;
+		bottom: 10px;
+		background: #fff;
+		background: rgba(255,255,255,0.9);
+		padding: 5px 0;
+	}
+	.ei-title h2, .ei-title h3{
+		text-align: center;
+	}
+	.ei-title h2{
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.ei-title h3{
+		font-size: 30px;
+		line-height: 40px;
+	}
+}
+
+.header-footer {
+	background: #0D2447;
+	width: 100%;
+	height: 218px;
+	overflow: hidden;
+	position: relative;
+	top: 37px;
+}
+
+.header-footer .logo {
+	width: 220px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.header-footer .logo img {
+	width: 245px;
+}
+
+.logo-text {
+	overflow: hidden;
+	width: 650px;
+	margin: 0 auto;
+	color: #ccc;
 }
